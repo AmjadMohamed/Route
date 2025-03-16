@@ -1,0 +1,79 @@
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <fieldset style="background-color:  rgb(127, 127, 185);">
+            <legend style="background-color: rgb(174, 174, 255);">Personal Data</legend>
+            <br>
+            <fieldset style="background-color:  rgb(219, 219, 255);">
+                <legend
+                    style="background-color: rgb(174, 174, 255); width: 80px; height: 100px; font-weight: bold; display: flex; justify-content: center; align-items: center;">
+                    YourName</legend>
+                <table>
+                    <tr>
+                        <td><label for="fn"> first name: </label></td>
+                        <td><input id="fn" name="first_name" placeholder="ex: amjad" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sn"> second name: </label></td>
+                        <td><input id="sn" name="second_name" placeholder="ex: mohamed" /></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+            <br><br>
+
+            <table>
+                <tr>
+                    <td> <label for="ph"> your phone: </label></td>
+                    <td> <input id="ph" type="tel" name="phone" /></td>
+                </tr>
+                <tr>
+                    <td><label for="em"> Email: </label></td>
+                    <td><input id="em" type="email" name="email" /></td>
+                </tr>
+                <tr>
+                    <td><label for="pass"> password: </label></td>
+                    <td><input id="pass" type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td><label for="repass"> re-password: </label></td>
+                    <td><input id="repass" type="password" name="repassword" /></td>
+                </tr>
+            </table>
+            <br><br>
+
+            <input id="female" type="radio" name="gender" value="fm" />
+            <label for="female"> Female</label>
+            <br>
+            <input id="male" type="radio" name="gender" value="ma" />
+            <label for="male"> Male</label>
+            <br><br>
+
+            <input id="student" type="checkbox" name="education" value="stu" />
+            <label for="student"> Student</label>
+            <br>
+            <input id="graduate" type="checkbox" name="education" value="grad" />
+            <label for="graduate"> Graduated</label>
+            <br><br>
+
+            <select name="Uni">
+                <optgroup label="Cairo">
+                    <option value="cai">Cairo</option>
+                    <option value="must">MUST</option>
+                </optgroup>
+                <optgroup label="Mansoura">
+                    <option value="mans">Mansoura</option>
+                    <option value="MET">MET Academy</option>
+                </optgroup>
+            </select>
+
+            <br>
+            <button><img src="./Images/red-submit-button-png-2.png" width="80px"></button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
