@@ -1,0 +1,17 @@
+.sec1{
+    background-color: gray;
+}
+
+.item{
+    width: 25%;
+    float: left;
+}
+
+.item img
+{
+    width: 100%;
+}
+
+.clr{
+    clear: both;
+}

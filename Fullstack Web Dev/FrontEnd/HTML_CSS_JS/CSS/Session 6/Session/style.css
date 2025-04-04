@@ -1,0 +1,31 @@
+.test
+{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 14px 20px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.test::after
+{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    top:85%;
+    left:5px;
+}
+
+.test::before
+{
+    content: "";
+    width: 4px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    top:85%;
+    left:11px;
+    z-index: 10;
+}
