@@ -1,0 +1,747 @@
+/***************************** Media Query **************************/
+@media screen and (max-width: 576px) {
+
+    /****************Header***************/
+    .logo {
+        text-align: center;
+    }
+
+    .navButtons {
+        width: 100%;
+        left: 0px;
+        top: 100px;
+    }
+
+    .navButtons li {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    .headerContent h3 {
+        font-size: 15px;
+    }
+
+    .headerContent h1 {
+        font-size: 45px;
+    }
+
+    .headerContent h4 {
+        font-size: 15px;
+    }
+
+    /**********************************/
+
+    /****************Hello***************/
+    .helloSection {
+        height: 1000px;
+    }
+
+    .helloImage {
+        left: 40px;
+        top: 0px;
+    }
+
+    .helloAbout {
+        height: 200px;
+        width: 90%;
+        top: 450px;
+        left: 10px;
+    }
+
+    .infoList li {
+        width: 100%;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Services***************/
+    .servicesSection {
+        height: 1150px;
+    }
+
+    .servicesContainer {
+        /* background-color: red; */
+        width: 280px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .servicesElement {
+        /* background-color: black; */
+        float: none;
+        margin-left: 0px;
+    }
+
+    /**********************************/
+
+    /****************Portfolio***************/
+    .portfolioSection {
+        height: 2100px;
+    }
+
+    .portfolioImageContainer {
+        /* background-color: black; */
+        width: 350px;
+        height: 100%;
+    }
+
+    .portfolioImage {
+        margin-left: 0px;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Work***************/
+
+    .workSection {
+        height: 540px;
+    }
+
+    .workSectionContainer {
+        /* background-color: black; */
+        width: 30%;
+    }
+
+    .workSectionElement {
+        /* background-color: #555555; */
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Feedback***************/
+
+    .feedbackSection {
+        height: 500px;
+    }
+
+    .feedbackCard {
+        width: 70%;
+        height: 300px;
+    }
+
+    /**********************************/
+
+    /****************Our Blog***************/
+
+    .blogSection {
+        height: 1550px;
+    }
+
+    .blogSection .container {
+        width: 350px;
+        height: 100%;
+    }
+
+    .blogSectionElement {
+        width: 100%;
+        height: 450px;
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+
+    .blogSectionElement img {
+        height: 210px;
+    }
+
+    .blogSectionElement iframe {
+        height: 210px;
+    }
+
+    /**********************************/
+
+    /****************Contact Us***************/
+
+    .contactUsSection {
+        height: 450px;
+    }
+
+    .contactForm {
+        width: 90%;
+    }
+
+    .inputRow input {
+        float: none;
+        width: 100%;
+    }
+
+    /**********************************/
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    /****************Header***************/
+    .logo {
+        /* background-color: red; */
+        left: 0px;
+        text-align: center;
+    }
+
+    .navButtons {
+        width: 100%;
+        left: 38px;
+        top: 50px;
+    }
+
+    .navButtons li {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    .headerContent h3 {
+        font-size: 20px;
+    }
+
+    .headerContent h1 {
+        font-size: 55px;
+    }
+
+    .headerContent h4 {
+        font-size: 20px;
+    }
+
+    /**********************************/
+
+    /****************Hello***************/
+    .helloSection {
+        height: 1000px;
+    }
+
+    .helloImage {
+        left: 40px;
+        top: 0px;
+    }
+
+    .helloAbout {
+        height: 200px;
+        width: 90%;
+        top: 450px;
+        left: 10px;
+    }
+
+    .infoList li {
+        width: 100%;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Services***************/
+    .servicesSection {
+        height: 1150px;
+    }
+
+    .servicesContainer {
+        /* background-color: red; */
+        width: 280px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .servicesElement {
+        /* background-color: black; */
+        float: none;
+        margin-left: 0px;
+    }
+
+    /**********************************/
+
+    /****************Portfolio***************/
+    .portfolioSection {
+        height: 2100px;
+    }
+
+    .portfolioImageContainer {
+        /* background-color: black; */
+        width: 350px;
+        height: 100%;
+    }
+
+    .portfolioImage {
+        margin-left: 0px;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Work***************/
+
+    .workSection {
+        height: 540px;
+    }
+
+    .workSectionContainer {
+        /* background-color: black; */
+        width: 30%;
+    }
+
+    .workSectionElement {
+        /* background-color: #555555; */
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        float: none;
+    }
+
+    /**********************************/
+
+    /****************Feedback***************/
+
+    .feedbackSection {
+        height: 500px;
+    }
+
+    .feedbackCard {
+        width: 70%;
+        height: 250px;
+    }
+
+    /**********************************/
+
+    /****************Our Blog***************/
+
+    .blogSection {
+        height: 1550px;
+    }
+
+    .blogSection .container {
+        width: 400px;
+        height: 100%;
+    }
+
+    .blogSectionElement {
+        width: 100%;
+        height: 450px;
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+
+    .blogSectionElement img {
+        height: 210px;
+    }
+
+    .blogSectionElement iframe {
+        height: 210px;
+    }
+
+    /**********************************/
+
+    /****************Contact Us***************/
+
+    .contactUsSection {
+        height: 450px;
+    }
+
+    .contactForm {
+        width: 90%;
+    }
+
+    .inputRow input {
+        float: none;
+        width: 100%;
+    }
+
+    /**********************************/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    /****************Header***************/
+    .logo {
+        left: 0px;
+        text-align: center;
+    }
+
+    .navButtons {
+        top: 10px;
+        width: 500px;
+    }
+
+    .navButtons li {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    /**********************************/
+
+    /****************Hello***************/
+
+    .helloSection {
+        width: 100%;
+        height: 540px;
+        padding: 100px 0 125px;
+        /* background-color: wheat; */
+    }
+
+
+    .helloImage {
+        left: 10px;
+    }
+
+    .helloAbout {
+        height: 200px;
+        width: 45%;
+        left: 400px;
+    }
+
+    .infoList li {
+        font-size: 14px;
+    }
+
+    .helloSectionButtons {
+        margin-bottom: 5px;
+    }
+
+    /**********************************/
+
+    /****************Services***************/
+    .servicesSection {
+        height: 640px;
+    }
+
+    .servicesContainer {
+        /* background-color: red; */
+        width: 560px;
+        height: 100%;
+        margin: auto;
+    }
+
+    /**********************************/
+
+    /****************Portfolio***************/
+    .portfolioSection {
+        height: 1100px;
+    }
+
+    .portfolioImageContainer {
+        width: 740px;
+        height: 100%;
+    }
+
+    
+
+    /**********************************/
+
+    /****************Work***************/
+
+    .workSectionContainer {
+        /* background-color: black; */
+        width: 600px;
+    }
+
+    .workSectionElement {
+        margin-left: 30px;
+    }
+
+    /**********************************/
+
+    /****************Feedback***************/
+
+    .feedbackSection {
+        height: 500px;
+    }
+
+    .feedbackCard {
+        width: 60%;
+        height: 200px;
+    }
+
+    /**********************************/
+
+    /****************Our Blog***************/
+
+    .blogSection .container {
+        width: 750px;
+        height: 100%;
+    }
+
+    .blogSectionElement {
+        height: 480px;
+        width: 200px;
+        margin-bottom: 50px;
+    }
+
+    .blogSectionElement img {
+        height: 120px;
+    }
+
+    .blogSectionElement iframe {
+        height: 120px;
+    }
+
+    /**********************************/
+
+    /****************Contact Us***************/
+
+    .contactUsSection {
+        height: 450px;
+    }
+
+    .contactForm {
+        width: 70%;
+    }
+
+    /**********************************/
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /****************Header***************/
+    .logo {
+        left: 0px;
+        text-align: center;
+    }
+
+    .navButtons {
+        top: 10px;
+        width: 500px;
+    }
+
+    .navButtons li {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    /**********************************/
+
+    /****************Hello***************/
+
+    .helloSection {
+        width: 100%;
+        height: 540px;
+        padding: 100px 0 125px;
+        /* background-color: wheat; */
+    }
+
+
+    .helloImage {
+        left: 10px;
+    }
+
+    .helloAbout {
+        height: 200px;
+        width: 60%;
+        left: 400px;
+    }
+
+    /**********************************/
+
+    /****************Services***************/
+
+    .servicesContainer {
+        /* background-color: red; */
+        width: 920px;
+    }
+
+    .servicesElement {
+        width: 200px;
+    }
+
+    /**********************************/
+
+    /****************Portfolio***************/
+
+    .portfolioSection {
+        height: 600px;
+    }
+
+    .portfolioImageContainer {
+        width: 810px;
+    }
+
+    .portfolioImage {
+        width: 250px;
+        height: 200px;
+    }
+
+    
+
+    /**********************************/
+
+    /****************Work***************/
+
+    .workSectionContainer {
+        /* background-color: black; */
+        width: 600px;
+    }
+
+    .workSectionElement {
+        margin-left: 30px;
+    }
+
+    /**********************************/
+
+    /****************Feedback***************/
+
+    .feedbackSection {
+        height: 500px;
+    }
+
+    .feedbackCard {
+        width: 60%;
+        height: 200px;
+    }
+
+    /**********************************/
+
+    /****************Our Blog***************/
+
+    .blogSection .container {
+       /* background-color: rebeccapurple; */
+        width: 1000px;
+        height: 100%;
+    }
+
+    .blogSectionElement {
+        height: 480px;
+        width: 270px;
+    }
+
+    .blogSectionElement img {
+        height: 160px;
+    }
+
+    .blogSectionElement iframe {
+        height: 160px;
+    }
+
+    /**********************************/
+
+    /****************Contact Us***************/
+
+    .contactUsSection {
+        height: 450px;
+    }
+
+    .contactForm {
+        width: 70%;
+    }
+
+    /**********************************/
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+    /****************Header***************/
+    .logo {
+        left: 0px;
+        text-align: center;
+    }
+
+    .navButtons {
+        top: 10px;
+        width: 500px;
+    }
+
+    .navButtons li {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    /**********************************/
+
+    /****************Hello***************/
+
+    .helloSection {
+        width: 100%;
+        height: 540px;
+        padding: 100px 0 125px;
+        /* background-color: wheat; */
+    }
+
+
+    .helloImage {
+        left: 35px;
+    }
+
+    .helloAbout {
+        height: 200px;
+        width: 60%;
+        left: 450px;
+    }
+
+    .infoList li {
+        width: 270px;
+    }
+
+    /**********************************/
+
+    /****************Services***************/
+
+    .servicesContainer {
+        /* background-color: red; */
+        width: 920px;
+    }
+
+    .servicesElement {
+        width: 200px;
+    }
+
+    /**********************************/
+
+    /****************Work***************/
+
+    .workSectionContainer {
+        width: 1000px;
+    }
+
+    /**********************************/
+
+    /****************Feedback***************/
+
+    .feedbackSection {
+        height: 500px;
+    }
+
+    .feedbackCard {
+        width: 55%;
+        height: 200px;
+    }
+
+    /**********************************/
+
+    /****************Our Blog***************/
+
+    .blogSection .container {
+       /* background-color: rebeccapurple; */
+        width: 1000px;
+        height: 100%;
+    }
+
+    .blogSectionElement {
+        height: 480px;
+        width: 270px;
+    }
+
+    .blogSectionElement img {
+        height: 160px;
+    }
+
+    .blogSectionElement iframe {
+        height: 160px;
+    }
+
+    /**********************************/
+
+    /****************Contact Us***************/
+
+    .contactUsSection {
+        height: 450px;
+    }
+
+    .contactForm {
+        width: 70%;
+    }
+
+    /**********************************/
+}
+
+
+/********************************************************************/
