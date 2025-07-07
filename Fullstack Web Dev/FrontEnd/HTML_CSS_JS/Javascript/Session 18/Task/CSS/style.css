@@ -1,0 +1,5 @@
+/**********General**********/
+* {
+    --montserrat-font: "Montserrat", sans-serif;
+    font-family: var(--montserrat-font);
+}

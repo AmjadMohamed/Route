@@ -25,6 +25,13 @@
 
 a {
     text-decoration: none;
+    /* color: black; */
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -40,18 +47,56 @@ a {
 
 .navbar .nav-link {
     color: white;
+    position: relative;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
-    color: red;
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background-color: white;
+    bottom: 0px;
+    left: 7px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link.show::before,
+.nav-link:focus::before,
+.nav-link:hover::before {
+    width: 45px;
 }
 
 
-.nav-link:focus,
-.nav-link:hover {
-    color: red;
+.dropdown-submenu {
+    position: relative;
 }
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -0.1rem;
+    margin-left: 0.1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    color: var(--main-website-color);
+}
+
 
 /********End NavBar********/
 
@@ -60,7 +105,368 @@ a {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Images/hero-bg.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
+
+.home-section p::after {
+    content: "";
+    animation: typing 10s steps(1) infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "|";
+    }
+
+    1% {
+        content: "|";
+    }
+
+    /* FREELANCER (Type) */
+    2% {
+        content: "F|";
+    }
+
+    3% {
+        content: "Fr|";
+    }
+
+    4% {
+        content: "Fre|";
+    }
+
+    5% {
+        content: "Free|";
+    }
+
+    6% {
+        content: "Freel|";
+    }
+
+    7% {
+        content: "Freela|";
+    }
+
+    8% {
+        content: "Freelan|";
+    }
+
+    9% {
+        content: "Freelanc|";
+    }
+
+    10% {
+        content: "Freelance|";
+    }
+
+    11% {
+        content: "Freelancer|";
+    }
+
+    /* FREELANCER (Delete) */
+    12% {
+        content: "Freelancer|";
+    }
+
+    13% {
+        content: "Freelance|";
+    }
+
+    14% {
+        content: "Freelanc|";
+    }
+
+    15% {
+        content: "Freelan|";
+    }
+
+    16% {
+        content: "Freela|";
+    }
+
+    17% {
+        content: "Freel|";
+    }
+
+    18% {
+        content: "Free|";
+    }
+
+    19% {
+        content: "Fre|";
+    }
+
+    20% {
+        content: "Fr|";
+    }
+
+    21% {
+        content: "F|";
+    }
+
+    22% {
+        content: "|";
+    }
+
+    /* PHOTOGRAPHER (Type) */
+    23% {
+        content: "P|";
+    }
+
+    24% {
+        content: "Ph|";
+    }
+
+    25% {
+        content: "Pho|";
+    }
+
+    26% {
+        content: "Phot|";
+    }
+
+    27% {
+        content: "Photo|";
+    }
+
+    28% {
+        content: "Photog|";
+    }
+
+    29% {
+        content: "Photogr|";
+    }
+
+    30% {
+        content: "Photogra|";
+    }
+
+    31% {
+        content: "Photograp|";
+    }
+
+    32% {
+        content: "Photograph|";
+    }
+
+    33% {
+        content: "Photographe|";
+    }
+
+    34% {
+        content: "Photographer|";
+    }
+
+    /* PHOTOGRAPHER (Delete) */
+    35% {
+        content: "Photographer|";
+    }
+
+    36% {
+        content: "Photographe|";
+    }
+
+    37% {
+        content: "Photograph|";
+    }
+
+    38% {
+        content: "Photograp|";
+    }
+
+    39% {
+        content: "Photogra|";
+    }
+
+    40% {
+        content: "Photogr|";
+    }
+
+    41% {
+        content: "Photog|";
+    }
+
+    42% {
+        content: "Photo|";
+    }
+
+    43% {
+        content: "Phot|";
+    }
+
+    44% {
+        content: "Pho|";
+    }
+
+    45% {
+        content: "Ph|";
+    }
+
+    46% {
+        content: "P|";
+    }
+
+    47% {
+        content: "|";
+    }
+
+    /* DESIGNER (Type) */
+    48% {
+        content: "D|";
+    }
+
+    49% {
+        content: "De|";
+    }
+
+    50% {
+        content: "Des|";
+    }
+
+    51% {
+        content: "Desi|";
+    }
+
+    52% {
+        content: "Desig|";
+    }
+
+    53% {
+        content: "Design|";
+    }
+
+    54% {
+        content: "Designe|";
+    }
+
+    55% {
+        content: "Designer|";
+    }
+
+    /* DESIGNER (Delete) */
+    56% {
+        content: "Designer|";
+    }
+
+    57% {
+        content: "Designe|";
+    }
+
+    58% {
+        content: "Design|";
+    }
+
+    59% {
+        content: "Desig|";
+    }
+
+    60% {
+        content: "Desi|";
+    }
+
+    61% {
+        content: "Des|";
+    }
+
+    62% {
+        content: "De|";
+    }
+
+    63% {
+        content: "D|";
+    }
+
+    64% {
+        content: "|";
+    }
+
+    /* DEVELOPER (Type) */
+    65% {
+        content: "D|";
+    }
+
+    66% {
+        content: "De|";
+    }
+
+    67% {
+        content: "Dev|";
+    }
+
+    68% {
+        content: "Deve|";
+    }
+
+    69% {
+        content: "Devel|";
+    }
+
+    70% {
+        content: "Develo|";
+    }
+
+    71% {
+        content: "Develop|";
+    }
+
+    72% {
+        content: "Develope|";
+    }
+
+    73% {
+        content: "Developer|";
+    }
+
+    /* DEVELOPER (Delete) */
+    74% {
+        content: "Developer|";
+    }
+
+    75% {
+        content: "Develope|";
+    }
+
+    76% {
+        content: "Develop|";
+    }
+
+    77% {
+        content: "Develo|";
+    }
+
+    78% {
+        content: "Devel|";
+    }
+
+    79% {
+        content: "Deve|";
+    }
+
+    80% {
+        content: "Dev|";
+    }
+
+    81% {
+        content: "De|";
+    }
+
+    82% {
+        content: "D|";
+    }
+
+    83% {
+        content: "|";
+    }
+
+    /* Pause / Restart Loop */
+    84%,
+    100% {
+        content: "|";
+    }
+}
+
+
+
 
 /********End home********/
 
@@ -138,6 +544,7 @@ a {
     background-image: linear-gradient(#0077ffb2, #0077ffb2), url(../Images/counters-bg.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     color: #CDE1F8;
 }
 
@@ -168,7 +575,7 @@ a {
     -o-border-radius: 0%;
 }
 
-.portfolio-section .card img {
+.portfolio-section .card .img-container img {
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -176,7 +583,8 @@ a {
     -o-transition: all 0.5s ease-in-out;
 }
 
-.portfolio-section .card:hover img {
+.portfolio-section .card .img-container:hover img {
+    cursor: pointer;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -203,3 +611,173 @@ a {
 }
 
 /********End Portfolio********/
+
+/**********Clients**********/
+.clients-section {
+    background-image: linear-gradient(#0077ffb2, #0077ffb2), url(../Images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #CDE1F8;
+}
+
+.clients-section .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/********End Clients********/
+
+/**********Blog**********/
+.blog-section {
+    background-color: var(--main-bg-color);
+}
+
+.blog-section .card .list-group-item {
+    background-color: #F8F8F8;
+}
+
+.blog-section .card .list-group-item img {
+    width: 35px;
+}
+
+.blog-section .card .card-image {
+    position: relative;
+}
+
+.blog-section .card .card-image::before {
+    content: "TRAVEL";
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    padding: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    width: 70px;
+    background-color: var(--main-website-color);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+
+.blog-section .item2 .card .card-image::before,
+.blog-section .item3 .card .card-image::before {
+    content: "WEB DESIGN";
+    width: 100px;
+}
+
+/********End Blog********/
+
+/**********Contact**********/
+.contact-section {
+    background-image: linear-gradient(#0077ffb2, #0077ffb2), url(../Images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-section .container {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .container h5 {
+    position: relative;
+}
+
+.contact-section .container h5::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: var(--main-website-color);
+    bottom: -15px;
+}
+
+.contact-section .form-container .btn {
+    border: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-section .form-container .btn:hover {
+    border-color: #CDE1F8;
+    background-color: #0d6dfdce;
+}
+
+.contact-section .form-container .form-control {
+    border-radius: 0%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
+}
+
+
+
+.contact-section .info i {
+    color: var(--main-website-color);
+}
+
+.contact-section .links i {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 4px solid #0d6efd;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.contact-section .links li:hover i {
+    background-color: var(--main-website-color);
+    color: white;
+    border-color: #CDE1F8;
+}
+
+/********End Contact********/
+
+
+/**********Footer**********/
+footer {
+    background-color: #0062D3;
+}
+
+/********End Footer********/
+
+/**********Back to top button**********/
+.back-to-top-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 999;
+    background-color: var(--main-website-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.back-to-top-btn:hover {
+    background-color: #298eff;
+}
+
+/********End Back to top button********/

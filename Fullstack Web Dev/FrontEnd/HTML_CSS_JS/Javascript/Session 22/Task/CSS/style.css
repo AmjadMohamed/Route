@@ -1,0 +1,56 @@
+/**********General**********/
+* {
+    --montserrat-font: "Montserrat", sans-serif;
+    font-family: var(--montserrat-font);
+}
+
+body{
+    background-color: #DBE2EF;
+}
+
+
+::selection{
+    background-color: black;
+    color: white;
+}
+
+/**********Logo**********/
+.logo{
+    margin: auto;
+    width: fit-content;
+    position: relative;
+}
+
+.logo:hover::before,
+.logo:hover::after{
+    width: 100%;
+}
+
+.logo::before
+{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo::after
+{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    right: 0px;
+    bottom: 0px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+/**********Content**********/
+.content button{
+    background-color: #3F72AF;
+}

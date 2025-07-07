@@ -1,0 +1,893 @@
+/**********General**********/
+* {
+    --montserrat-font: "Montserrat", sans-serif;
+    --popping-font: "Poppins", sans-serif;
+    --secondary-bg-color: #F7F7F7;
+    --main-website-color: #343434;
+    --buttons-dark-color: #1C1C1C;
+    --main-margin: 30px;
+    scroll-padding: 61px;
+    font-family: var(--popping-font);
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    margin-bottom: 80px;
+}
+
+.section-title h3 {
+    font-family: var(--montserrat-font);
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--main-website-color);
+}
+
+.section-title h3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-image: url(../Images/dots.png);
+    background-repeat: repeat;
+    bottom: -10px;
+    left: 0px;
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/********End General********/
+
+
+/**********NavBar**********/
+.navbar {
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+.navbar .navbar-brand {
+    font-family: var(--montserrat-font);
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+.navbar .nav-link {
+    font-size: 14px;
+}
+
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-link.active::before,
+.navbar-nav .nav-link.show::before,
+.nav-link:focus::before {
+    width: 100%;
+}
+
+/********End NavBar********/
+
+/**********Home**********/
+.home-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../Images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-section h5 {
+    font-family: var(--montserrat-font);
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.home-section p {
+    font-weight: 200;
+    font-size: 60px;
+}
+
+.home-section p::after {
+    content: "";
+    font-weight: 400;
+    animation: typing 10s steps(1) infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "|";
+    }
+
+    1% {
+        content: "|";
+    }
+
+    /* DEVELOPER (Type) */
+    2% {
+        content: "D|";
+    }
+
+    3% {
+        content: "De|";
+    }
+
+    4% {
+        content: "Dev|";
+    }
+
+    5% {
+        content: "Deve|";
+    }
+
+    6% {
+        content: "Devel|";
+    }
+
+    7% {
+        content: "Develo|";
+    }
+
+    8% {
+        content: "Develop|";
+    }
+
+    9% {
+        content: "Develope|";
+    }
+
+    10% {
+        content: "Developer|";
+    }
+
+    /* Pause on DEVELOPER */
+    11% {
+        content: "Developer|";
+    }
+
+    12% {
+        content: "Developer|";
+    }
+
+    /* DEVELOPER (Delete) */
+    13% {
+        content: "Develope|";
+    }
+
+    14% {
+        content: "Develop|";
+    }
+
+    15% {
+        content: "Develo|";
+    }
+
+    16% {
+        content: "Devel|";
+    }
+
+    17% {
+        content: "Deve|";
+    }
+
+    18% {
+        content: "Dev|";
+    }
+
+    19% {
+        content: "De|";
+    }
+
+    20% {
+        content: "D|";
+    }
+
+    21% {
+        content: "|";
+    }
+
+    /* DESIGNER (Type) */
+    22% {
+        content: "D|";
+    }
+
+    23% {
+        content: "De|";
+    }
+
+    24% {
+        content: "Des|";
+    }
+
+    25% {
+        content: "Desi|";
+    }
+
+    26% {
+        content: "Desig|";
+    }
+
+    27% {
+        content: "Design|";
+    }
+
+    28% {
+        content: "Designe|";
+    }
+
+    29% {
+        content: "Designer|";
+    }
+
+    /* Pause on DESIGNER */
+    30% {
+        content: "Designer|";
+    }
+
+    31% {
+        content: "Designer|";
+    }
+
+    /* DESIGNER (Delete) */
+    32% {
+        content: "Designe|";
+    }
+
+    33% {
+        content: "Design|";
+    }
+
+    34% {
+        content: "Desig|";
+    }
+
+    35% {
+        content: "Desi|";
+    }
+
+    36% {
+        content: "Des|";
+    }
+
+    37% {
+        content: "De|";
+    }
+
+    38% {
+        content: "D|";
+    }
+
+    39% {
+        content: "|";
+    }
+
+    /* LARRY DANIELS (Type) */
+    40% {
+        content: "L|";
+    }
+
+    41% {
+        content: "La|";
+    }
+
+    42% {
+        content: "Lar|";
+    }
+
+    43% {
+        content: "Larr|";
+    }
+
+    44% {
+        content: "Larry|";
+    }
+
+    45% {
+        content: "Larry |";
+    }
+
+    46% {
+        content: "Larry D|";
+    }
+
+    47% {
+        content: "Larry Da|";
+    }
+
+    48% {
+        content: "Larry Dan|";
+    }
+
+    49% {
+        content: "Larry Dani|";
+    }
+
+    50% {
+        content: "Larry Danie|";
+    }
+
+    51% {
+        content: "Larry Daniel|";
+    }
+
+    52% {
+        content: "Larry Daniels|";
+    }
+
+    /* Pause on LARRY DANIELS */
+    53% {
+        content: "Larry Daniels|";
+    }
+
+    54% {
+        content: "Larry Daniels|";
+    }
+
+    /* LARRY DANIELS (Delete) */
+    55% {
+        content: "Larry Daniel|";
+    }
+
+    56% {
+        content: "Larry Danie|";
+    }
+
+    57% {
+        content: "Larry Dani|";
+    }
+
+    58% {
+        content: "Larry Dan|";
+    }
+
+    59% {
+        content: "Larry Da|";
+    }
+
+    60% {
+        content: "Larry D|";
+    }
+
+    61% {
+        content: "Larry |";
+    }
+
+    62% {
+        content: "Larry|";
+    }
+
+    63% {
+        content: "Larr|";
+    }
+
+    64% {
+        content: "Lar|";
+    }
+
+    65% {
+        content: "La|";
+    }
+
+    66% {
+        content: "L|";
+    }
+
+    67% {
+        content: "|";
+    }
+
+    /* Restart loop immediately */
+    68%,
+    100% {
+        content: "|";
+    }
+}
+
+.home-section .social-icons i {
+    font-size: 13px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/********End home********/
+
+/**********About**********/
+.about-section .hero-img {
+    margin-bottom: var(--main-margin);
+    padding: 0px 0px 0px 30px;
+}
+
+.about-section .hero-img::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 0px;
+    bottom: 0px;
+    background-image: url(../Images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.about-section h3 {
+    color: var(--main-website-color);
+    font-family: var(--montserrat-font);
+    font-weight: 800;
+}
+
+.about-section .content .par {
+    color: #748182;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.about-section .content .title {
+    color: #999;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-section .skills .item {
+    margin-bottom: var(--main-margin);
+}
+
+.about-section .skills .item .progress {
+    height: 25px;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
+.about-section .skills .item .progress .progress-bar {
+    background-color: var(--buttons-dark-color);
+}
+
+.about-section .skills .item .progress .bar-title {
+    font-family: var(--montserrat-font);
+}
+
+.about-section .about-buttons .download-cv {
+    background-color: var(--buttons-dark-color);
+    color: #eee;
+    padding: 10px 30px;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.about-section .about-buttons .download-cv:hover {
+    background-color: transparent;
+    color: var(--main-website-color);
+}
+
+.about-section .about-buttons .contact-me {
+    color: var(--main-website-color);
+    padding: 10px 30px;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.about-section .about-buttons .contact-me:hover {
+    background-color: var(--buttons-dark-color);
+    color: #eee;
+}
+
+
+/********End About********/
+
+/**********Services**********/
+.services-section {
+    background-color: var(--secondary-bg-color);
+}
+
+.services-section .inner {
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+.services-section .inner i {
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #f4f4f4;
+    color: var(--main-website-color);
+    margin-bottom: 20px;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.services-section .inner h6 {
+    font-family: var(--montserrat-font);
+    font-weight: 800;
+    color: var(--main-website-color);
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.services-section .inner p {
+    word-spacing: 2px;
+    font-size: 14px;
+    color: #748182;
+}
+
+.services-section .inner:hover i {
+    background-color: var(--buttons-dark-color);
+    color: white;
+}
+
+
+/********End Services********/
+
+
+/**********Portfolio**********/
+
+.portfolio-section .nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    bottom: -4px;
+    left: 0px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.portfolio-section .nav-pills .nav-link.active::before {
+    width: 100%;
+}
+
+.portfolio-section .zoom-in-button {
+    cursor: pointer;
+}
+
+
+.portfolio-section .layer {
+    top: 7px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+    -webkit-transition: 0.5s all ease-in-out;
+    -moz-transition: 0.5s all ease-in-out;
+    -ms-transition: 0.5s all ease-in-out;
+    -o-transition: 0.5s all ease-in-out;
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+}
+
+.portfolio-section .inner .layer .layer-inner h6 {
+    font-family: var(--montserrat-font);
+    font-size: 12px;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.portfolio-section .inner .layer .layer-links i {
+    font-size: 13px;
+    width: 30px;
+    height: 30px;
+}
+
+.portfolio-section .inner .layer .layer-links {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transition: 0.5s all;
+}
+
+.portfolio-section .inner:hover .layer {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.portfolio-section .inner:hover .layer .layer-links {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
+.portfolio-section .inner:hover .layer .layer-inner h6 {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
+.portfolio-section .inner .layer-links i {
+    background-color: black;
+    color: white;
+}
+
+.portfolio-section .inner .layer-links i:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/********End Portfolio********/
+
+/**********Clients**********/
+.clients-section {
+    background-color: var(--secondary-bg-color);
+}
+
+.clients-section .carousel-item .img-container {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+}
+
+
+.clients-section .carousel-item p {
+    font-size: 15px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    color: #748182;
+}
+
+.clients-section .carousel-item h6 {
+    font-family: var(--montserrat-font);
+    margin: 30px 0 5px;
+}
+
+.clients-section .carousel-item span {
+    font-size: 13px;
+    color: #919191;
+}
+
+.clients-section .carousel-indicators [data-bs-target] {
+    background-color: #869791;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px 7px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/********End Clients********/
+
+/**********Work**********/
+.work-section .container .inner p {
+    color: #748186;
+}
+
+.work-section .container .inner h2 {
+    font-weight: 900;
+    color: var(--main-website-color);
+    font-family: var(--montserrat-font);
+}
+
+.work-section .container .inner i {
+    color: var(--main-website-color);
+}
+
+/********End Work********/
+
+/**********Team**********/
+
+.team-section {
+    background-color: var(--secondary-bg-color);
+}
+
+.team-section .card .card-body {
+    background-color: #5B5B5B;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.team-section .card .card-body h4,
+.team-section .card .card-body h5 {
+    font-family: var(--montserrat-font);
+}
+
+.card-img,
+.card-img-top {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.team-section .card .card-image .layer {
+    cursor: pointer;
+    top: 7px;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    opacity: 0;
+    transform: scale(0.5) rotateY(180deg);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transform: scale(0.5) rotateY(180deg);
+    -moz-transform: scale(0.5) rotateY(180deg);
+    -ms-transform: scale(0.5) rotateY(180deg);
+    -o-transform: scale(0.5) rotateY(180deg);
+}
+
+.team-section .card .card-image .layer .layer-links i {
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-color: black;
+}
+
+.team-section .card .card-image .layer .layer-links i:hover {
+    background-color: white;
+    color: black;
+}
+
+.team-section .card .card-image img {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+
+.team-section .card:hover .layer {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    -webkit-transform: scale(1) rotateY(0deg);
+    -moz-transform: scale(1) rotateY(0deg);
+    -ms-transform: scale(1) rotateY(0deg);
+    -o-transform: scale(1) rotateY(0deg);
+}
+
+.team-section .card .card-image:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+
+/********End Team********/
+
+/**********Contact**********/
+
+.contact-section .inner i {
+    width: 60px;
+    height: 60px;
+    background-color: #F4F4F4;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.contact-section .inner:hover i{
+    color: white;
+    background-color: black;
+}
+
+.contact-section .inner i,
+.contact-section .inner h6 {
+    color: var(--main-website-color);
+}
+
+.contact-section.inner p {
+    color: #748182;
+}
+
+.contact-section .contact-form {
+    margin-top: 50px;
+}
+
+.contact-section .contact-form .form-item,
+.contact-section .contact-form .form-item:focus {
+    background-color: #F4F4F4;
+}
+
+.contact-section .contact-form .buton {
+    padding: 10px 40px;
+    background-color: var(--buttons-dark-color);
+    color: #eee;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.contact-section .contact-form .buton:hover {
+    background-color: white;
+    color: var(--buttons-dark-color);
+}
+
+/********End Contact********/
+
+
+/**********Footer**********/
+footer {
+    background-color: var(--buttons-dark-color);
+    padding: 30px;
+}
+
+footer .container {
+    font-size: 13px;
+    word-spacing: 2px;
+    color: #748182;
+}
+
+/********End Footer********/

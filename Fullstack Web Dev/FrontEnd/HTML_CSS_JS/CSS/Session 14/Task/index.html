@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./CSS/all.min.css">
     <!--Main CSS-->
     <link rel="stylesheet" href="./CSS/style.css">
+    <!--Icon-->
+    <link rel="icon" href="./Images/bootstrap-icon.png" type="image/png">
     <title>Devfolio</title>
 </head>
 
@@ -53,27 +55,26 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
-                                <li>
-                                    <div class="btn-group dropend">
-                                        <button type="button" class="btn btn-secondary dropdown-toggle"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Deep Drop Down
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Deep Drop Down 1</a></li>
-                                            <li><a class="dropdown-item" href="#">Deep Drop Down 2</a></li>
-                                            <li><a class="dropdown-item" href="#">Deep Drop Down 3</a></li>
-                                            <li><a class="dropdown-item" href="#">Deep Drop Down 4</a></li>
-                                            <li><a class="dropdown-item" href="#">Deep Drop Down 5</a></li>
-                                        </ul>
-                                    </div>
+
+                                <!-- Deep Dropdown Start -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Deep Drop Down</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Deep Drop Down 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Deep Drop Down 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Deep Drop Down 3</a></li>
+                                        <li><a class="dropdown-item" href="#">Deep Drop Down 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Deep Drop Down 5</a></li>
+                                    </ul>
                                 </li>
+                                <!-- Deep Dropdown End -->
+
                                 <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
                                 <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
                                 <li><a class="dropdown-item" href="#">Drop Down 4</a></li>
-
                             </ul>
                         </li>
+
 
                         <li class="nav-item ps-3 fs-6 fw-semibold">
                             <a class="nav-link" href="#contact">CONTACT</a>
@@ -91,7 +92,7 @@
             class="home-section vh-100 d-flex justify-content-center align-items-center flex-column text-white gap-3">
             <div class="container text-center">
                 <h1 class="display-2 fw-medium">I am Morgan Freeman</h1>
-                <p class="fs-1 fw-medium">Designer|</p>
+                <p class="fs-1 fw-medium"></p>
             </div>
         </section>
         <!-----End Home------>
@@ -328,7 +329,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-1.jpg" class="card-img-top" alt="card image 1">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                                            src="./Images/work-1.jpg" class="card-img-top" alt="card image 1"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-1.jpg" class="card-img-top" alt="card image 1">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -354,7 +366,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-2.jpg" class="card-img-top" alt="card image 2">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal1"><img
+                                            src="./Images/work-2.jpg" class="card-img-top" alt="card image 2"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-2.jpg" class="card-img-top" alt="card image 2">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -380,7 +403,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-3.jpg" class="card-img-top" alt="card image 3">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img
+                                            src="./Images/work-3.jpg" class="card-img-top" alt="card image 3"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-3.jpg" class="card-img-top" alt="card image 3">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -406,7 +440,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-4.jpg" class="card-img-top" alt="card image 4">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img
+                                            src="./Images/work-4.jpg" class="card-img-top" alt="card image 4"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-4.jpg" class="card-img-top" alt="card image 4">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -432,7 +477,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-5.jpg" class="card-img-top" alt="card image 5">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal4"><img
+                                            src="./Images/work-5.jpg" class="card-img-top" alt="card image 5"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-5.jpg" class="card-img-top" alt="card image 5">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -458,7 +514,18 @@
                         <div class="inner">
                             <div class="card">
                                 <div class="img-container overflow-hidden">
-                                    <img src="./Images/work-6.jpg" class="card-img-top" alt="card image 6">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal5"><img
+                                            src="./Images/work-6.jpg" class="card-img-top" alt="card image 6"></a>
+                                </div>
+                                <div class="modal fade" id="exampleModal5" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <img src="./Images/work-6.jpg" class="card-img-top" alt="card image 6">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row d-flex align-items-center">
@@ -484,11 +551,229 @@
         </section>
         <!-----End Portfolio------>
 
+        <!--Clients-->
+        <section id="clients" class="clients-section py-5">
+            <div class="container py-5">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-inner text-center">
+                                <img src="./Images/testimonial-2.jpg" class="rounded-circle m-auto" alt="client 1">
+                                <blockquote class="w-75 m-auto fs-5 my-3">
+
+                                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor
+                                    sit amet,
+                                    consectetur adipiscing elit.
+
+                                </blockquote>
+                                <p>- Ebony verty, <span class="fw-bold">Envato</span></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-inner text-center">
+                                <img src="./Images/testimonial-4.jpeg" class="rounded-circle m-auto" alt="client 2">
+                                <blockquote class="w-75 m-auto fs-5 my-3">
+
+                                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor
+                                    sit amet,
+                                    consectetur adipiscing elit.
+
+                                </blockquote>
+                                <p>- Ebony verty, <span class="fw-bold">Envato</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators position-static mt-4">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----End Clients------>
+
+        <!--Blog-->
+        <section id="blog" class="blog-section py-5">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h3 class="display-5 fw-bold">BLOG</h3>
+                    <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="item1 inner">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./Images/post-1.jpg" class="card-img-top" alt="blog 1">
+                                </div>
+                                <div class="card-body my-2">
+                                    <h5 class="card-title">See more ideas about Travel</h5>
+                                    <p class="card-text text-muted">Proin eget tortor risus. Pellentesque in ipsum id
+                                        orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas
+                                        non nisi.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                                <img src="./Images/testimonial-2.jpg" alt="blog 1" class="rounded-5">
+                                                <p class="p-0 m-0">Morgan Freeman</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center gap-1">
+                                                <i class="fa-solid fa-clock" style="color: #000000;"></i>
+                                                <p class="m-0 p-0">10 min</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="item2 inner">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./Images/post-2.jpg" class="card-img-top" alt="blog 2">
+                                </div>
+                                <div class="card-body my-2">
+                                    <h5 class="card-title">See more ideas about Travel</h5>
+                                    <p class="card-text text-muted">Proin eget tortor risus. Pellentesque in ipsum id
+                                        orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas
+                                        non nisi.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                                <img src="./Images/testimonial-2.jpg" alt="blog 1" class="rounded-5">
+                                                <p class="p-0 m-0">Morgan Freeman</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center gap-1">
+                                                <i class="fa-solid fa-clock" style="color: #000000;"></i>
+                                                <p class="m-0 p-0">10 min</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="item3 inner">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./Images/post-3.jpg" class="card-img-top" alt="blog 3">
+                                </div>
+                                <div class="card-body my-2">
+                                    <h5 class="card-title">See more ideas about Travel</h5>
+                                    <p class="card-text text-muted">Proin eget tortor risus. Pellentesque in ipsum id
+                                        orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas
+                                        non nisi.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                                <img src="./Images/testimonial-2.jpg" alt="blog 1" class="rounded-5">
+                                                <p class="p-0 m-0">Morgan Freeman</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center gap-1">
+                                                <i class="fa-solid fa-clock" style="color: #000000;"></i>
+                                                <p class="m-0 p-0">10 min</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----End Blog------>
+
+        <!--Contact-->
+        <section id="contact" class="contact-section py-5 px-4">
+            <div class="container bg-white py-5 px-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="inner">
+                            <h5 class="fs-2">Send Message Us</h5>
+                            <div class="form-container mt-5">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Message"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit"
+                                        class="btn btn-primary d-block m-auto my-4 rounded-pill py-2 px-4  fs-5">Send
+                                        Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="inner pe-4">
+                            <h5 class="fs-2">Get in Touch</h5>
+                            <p class="text-muted fs-5 fw-light mt-5 mb-4">Lorem ipsum dolor sit amet consectetur
+                                adipisicing
+                                elit. Facilis dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni
+                                ipsum
+                                suscipit amet? Autem nemo esse laboriosam ratione nobis mollitia inventore?</p>
+
+                            <ul class="info p-0 d-flex flex-column gap-3 mb-4">
+                                <li>
+                                    <i class="fa-solid fa-location-dot me-2"></i> 329 WASHINGTON ST BOSTON, MA 02108
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-mobile-button me-2"></i> (617) 557-0089
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-envelope me-2"></i> contact@example.com
+                                </li>
+                            </ul>
+
+                            <ul class="links p-0 d-flex gap-4">
+                                <li><a href="#"><i class="fa-brands fa-facebook fs-4"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram fs-4"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter fs-4"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin fs-4"></i></a></li>
+                            </ul>
 
 
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----End Contact------>
     </main>
 
+    <footer class="py-4 text-center text-white">
+        <p class="mb-1 p-0">© Copyright <span class="fw-bold">DevFolio</span>. All Rights Reserved</p>
+        <p class="m-0 p-0">Designed by BootstrapMade</p>
+    </footer>
+
+    <a href="#" class="back-to-top-btn d-flex justify-content-center align-items-center text-white"><i
+            class="fa-solid fa-arrow-up"></i></a>
     <script src="./JS/bootstrap.bundle.min.js"></script>
 </body>
 

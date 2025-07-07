@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <title>Quote Of The Day</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-5">
+                    <div class="inner text-center">
+                        <h1 class="fw-bold display-3 text-uppercase">Quote Of The Day</h1>
+                        <div class="addDiv my-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" placeholder="Add Quote" id="addquote">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" placeholder="Add Author" id="addauthor">
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn-add btn btn-dark form-control" id="addButton">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="updateDiv">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="Update Quote" id="updatequote">
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn-update btn btn-dark form-control" id="updateButton">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5 mb-3 fs-3 border-black"> Press Get Quote Button To Get Your Quote</p>
+                        <div class="buttons d-flex justify-content-center gap-3">
+                            <button class="btn-GetQuote btn btn-dark btn-lg" id="getQuoteButton">Get Quote</button>
+                            <button class="btn-DeleteQuote btn btn-dark btn-lg" id="deleteQuoteButton">Delete Quote</button>
+                        </div>
+                        <p class="Quote mt-5 fs-4" id="quote"></p>
+                        <p class="Author mt-2 fs-4" id="author"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
