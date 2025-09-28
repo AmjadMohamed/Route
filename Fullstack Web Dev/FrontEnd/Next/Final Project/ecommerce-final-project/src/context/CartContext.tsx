@@ -17,6 +17,7 @@ const CartContextProvider = ({ children }: { children: React.ReactNode }) => {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isItemQuantityLoading, setIsItemQuantityLoading] = useState("");
+    const [cartId, setCartId] = useState("")
 
     async function addProductToCart(id: string) {
 
@@ -39,6 +40,7 @@ const CartContextProvider = ({ children }: { children: React.ReactNode }) => {
             setNumOfCartItems(data.numOfCartItems);
             setTotalCartPrice(data.data.totalCartPrice);
             setProducts(data.data.products);
+            setCartId(data.cartId);
             console.log(data);
             setIsLoading(false);
 
@@ -87,6 +89,15 @@ const CartContextProvider = ({ children }: { children: React.ReactNode }) => {
             console.log(error);
         }
     }
+
+    function ResetDataAfterPayment() {
+        setCartId("");
+        setNumOfCartItems(0);
+        setTotalCartPrice(0);
+        setProducts([]);
+    }
+
+
     useEffect(function () {
         getUserCart();
     }, [])
@@ -102,7 +113,9 @@ const CartContextProvider = ({ children }: { children: React.ReactNode }) => {
             removeCartItem,
             updateCartItemQuantity,
             isItemQuantityLoading,
-            clearCart
+            clearCart,
+            cartId,
+            ResetDataAfterPayment
         }}>
             {children}
         </cartContext.Provider>

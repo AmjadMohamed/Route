@@ -33,25 +33,6 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className='relative'>
-              <Link href={"/cart"}>
-                Cart
-
-                {numOfCartItems > 0 ? (
-                  <Badge className="w-1 h-4 text-[10px] absolute top-[-45%] bg-green-500">
-                    {numOfCartItems}
-                  </Badge>
-                ) : null}
-
-              </Link>
-            </li>
-
-            <li>
-              <Link href={"/products"}>
-                Products
-              </Link>
-            </li>
-
             <li>
               <Link href={"/categories"}>
                 Categories
@@ -63,6 +44,19 @@ const Navbar = () => {
                 Brands
               </Link>
             </li>
+
+            <li>
+              <Link href={"/allorders"}>
+                Orders
+              </Link>
+            </li>
+
+            <li>
+              <Link href={"/wishlist"}>
+                Wishlist
+              </Link>
+            </li>
+
           </>}
 
           {status === "loading" && <>
@@ -75,17 +69,33 @@ const Navbar = () => {
 
         <div className='flex flex-col md:flex-row text-center items-center gap-2'>
 
-          <div>
+          {/* <div className='me-5'>
             <i className='fab mx-2 fa-instagram'></i>
             <i className='fab mx-2 fa-facebook'></i>
             <i className='fab mx-2 fa-tiktok'></i>
             <i className='fab mx-2 fa-twitter'></i>
             <i className='fab mx-2 fa-linkedin'></i>
             <i className='fab mx-2 fa-youtube'></i>
-          </div>
+          </div> */}
 
           {status === "authenticated" && <>
-            <div>
+            <div className='flex gap-10 items-end'>
+
+
+              <div className='relative'>
+                <Link href={"/cart"}>
+                  <i className="fas fa-shopping-cart text-xl"></i>
+
+                  {numOfCartItems > 0 ? (
+                    <Badge className="w-1 h-4 text-[10px] absolute top-[-45%] bg-green-500">
+                      {numOfCartItems}
+                    </Badge>
+                  ) : null}
+
+                </Link>
+              </div>
+
+
               <button className='cursor-pointer' onClick={() => signOut({
                 callbackUrl: "/signin"
               })}>

@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Toaster } from "sonner";
 import Providers from "@/Providers";
+import Footer from "./_components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Toaster />
           <Navbar />
           {children}
+          <Footer />
         </Providers>
 
       </body>

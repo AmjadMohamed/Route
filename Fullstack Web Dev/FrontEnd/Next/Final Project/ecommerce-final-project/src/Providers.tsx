@@ -3,13 +3,16 @@
 import { SessionProvider } from 'next-auth/react'
 import React from 'react'
 import CartContextProvider from './context/CartContext'
+import WishlistContextProvider from './context/WishlistContext'
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
     return (
         <div>
             <SessionProvider>
                 <CartContextProvider>
-                    {children}
+                    <WishlistContextProvider>
+                        {children}
+                    </WishlistContextProvider>
                 </CartContextProvider>
             </SessionProvider>
         </div>
