@@ -7,12 +7,14 @@ import Image from 'next/image'
 import { signOut, useSession } from 'next-auth/react'
 import { cartContext } from '@/context/CartContext'
 import { Badge } from '@/components/ui/badge'
+import { wishlistContext } from '@/context/WishlistContext'
 
 const Navbar = () => {
 
   const { data: session, status } = useSession();
 
   const { numOfCartItems } = useContext(cartContext);
+  const { numOfWishlistItems } = useContext(wishlistContext);
 
 
   return (
@@ -51,9 +53,14 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li>
+            <li className='relative'>
               <Link href={"/wishlist"}>
                 Wishlist
+                {numOfWishlistItems > 0 ? (
+                  <Badge className="w-1 h-4 text-[10px] absolute top-[-45%] bg-green-500">
+                    {numOfWishlistItems}
+                  </Badge>
+                ) : null}
               </Link>
             </li>
 

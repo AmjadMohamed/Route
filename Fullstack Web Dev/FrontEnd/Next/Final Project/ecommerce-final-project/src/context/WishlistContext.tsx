@@ -1,6 +1,6 @@
-import { addProductToWishlist } from '@/apis/WishlistActions/addProductToWishlist';
-import { removeProductFromWishlist } from '@/apis/WishlistActions/removeProductFromWishlist';
-import { getUserWishlist } from '@/apis/WishlistActions/getUserWishlist';
+import { addProductToWishlistAction } from '@/apis/WishlistActions/addProductToWishlist';
+import { removeProductFromWishlistAction } from '@/apis/WishlistActions/removeProductFromWishlist';
+import { getUserWishlistAction } from '@/apis/WishlistActions/getUserWishlist';
 import { ProductRoot } from '@/types/product.type';
 import React, { createContext, useEffect, useState } from 'react'
 
@@ -13,21 +13,22 @@ const WishlistContextProvider = ({ children }: { children: React.ReactNode }) =>
     const [isLoading, setIsLoading] = useState(false);
     const [wishlistIds, setWishlistIds] = useState<string[]>([]);
 
-    async function addProductToWishlistAction(id: string) {
+    async function addProductToWishlist(id: string) {
         try {
-            const data = await addProductToWishlist(id);
+            const data = await addProductToWishlistAction(id);
             getUserWishlistData();
             return data;
         }
         catch (error) {
             console.log(error)
+            throw error;
         }
     }
 
     async function getUserWishlistData() {
         setIsLoading(true);
         try {
-            const data = await getUserWishlist();
+            const data = await getUserWishlistAction();
             setProducts(data.data);
             setNumOfWishlistItems(data.data.length);
             setWishlistIds(data.data.map((product: ProductRoot) => product._id));
@@ -40,11 +41,12 @@ const WishlistContextProvider = ({ children }: { children: React.ReactNode }) =>
 
     async function removeWishlistItem(id: string) {
         try {
-            const data = await removeProductFromWishlist(id);
+            const data = await removeProductFromWishlistAction(id);
             getUserWishlistData();
             return data;
         } catch (error) {
             console.log(error);
+            throw error;
         }
     }
 
@@ -54,9 +56,9 @@ const WishlistContextProvider = ({ children }: { children: React.ReactNode }) =>
 
     function toggleWishlist(id: string) {
         if (isInWishlist(id)) {
-            removeWishlistItem(id);
+            return removeWishlistItem(id);
         } else {
-            addProductToWishlistAction(id);
+            return addProductToWishlist(id);
         }
     }
 
@@ -69,7 +71,7 @@ const WishlistContextProvider = ({ children }: { children: React.ReactNode }) =>
             numOfWishlistItems,
             products,
             isLoading,
-            addProductToWishlist: addProductToWishlistAction,
+            addProductToWishlist,
             removeWishlistItem,
             isInWishlist,
             toggleWishlist,

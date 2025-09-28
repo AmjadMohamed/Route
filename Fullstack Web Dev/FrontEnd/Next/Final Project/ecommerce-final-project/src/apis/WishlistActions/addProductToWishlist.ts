@@ -3,7 +3,7 @@
 import { getMyToken } from "@/utilities/token";
 import axios from "axios";
 
-export async function addProductToWishlist(id: string) {
+export async function addProductToWishlistAction(id: string) {
     const token = await getMyToken();
 
     if (!token) {
@@ -14,13 +14,13 @@ export async function addProductToWishlist(id: string) {
         productId: id
     };
 
-    const reponse = await axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
+    const reponse = await axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,
         values
-    }, {
-        headers: {
-            token: token as string
-        }
-    });
+        , {
+            headers: {
+                token: token as string
+            }
+        });
 
     return reponse.data;
 }

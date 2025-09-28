@@ -3,7 +3,7 @@
 import { getMyToken } from '@/utilities/token';
 
 
-export async function getUserWishlist() {
+export async function getUserWishlistAction() {
 
     const token = await getMyToken();
 

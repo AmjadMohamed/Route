@@ -3,7 +3,7 @@
 import { getMyToken } from "@/utilities/token";
 import axios from "axios";
 
-export async function removeProductFromWishlist(id: string) {
+export async function removeProductFromWishlistAction(id: string) {
     const token = await getMyToken();
 
     if (!token) {

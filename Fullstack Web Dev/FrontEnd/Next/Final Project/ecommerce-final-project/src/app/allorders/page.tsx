@@ -1,11 +1,11 @@
-import { getUserOrder } from '@/apis/PaymentActions/fetchUserOrders'
+import { getUserOrderAction } from '@/apis/PaymentActions/fetchUserOrders'
 import { OrderRoot } from '@/types/order.type';
 import Image from 'next/image';
 import React from 'react'
 
 const AllOrders = async () => {
 
-    const data: OrderRoot = await getUserOrder();
+    const data: OrderRoot = await getUserOrderAction();
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('en-US', {
