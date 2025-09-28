@@ -1,0 +1,199 @@
+body {
+    --main-color: #1ABC9C;
+    --secondary-color: #2C3E50;
+    --footer-secondry-color: #1A252F;
+    padding-top: 76px;
+}
+
+.navBarButton:active {
+    background-color: var(--main-color);
+    border-radius: 8px;
+}
+
+.active-nav-link {
+    background-color: var(--main-color) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    display: inline-block !important;
+}
+
+.Bg-Main-Color {
+    background-color: var(--main-color);
+}
+
+.Bg-Secondary-Color {
+    background-color: var(--secondary-color);
+}
+
+.Text-Secondary-Color {
+    color: var(--secondary-color);
+}
+
+.Secondary-footer {
+    background-color: var(--footer-secondry-color);
+}
+
+.mainImage {
+    width: 250px;
+}
+
+.star-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.star-separator::before,
+.star-separator::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    max-width: 80px;
+}
+
+.star-separator-main {
+    color: var(--main-color);
+}
+
+.star-separator-main::before,
+.star-separator-main::after {
+    background: var(--main-color);
+}
+
+.star-separator-secondary {
+    color: var(--secondary-color);
+}
+
+.star-separator-secondary::before,
+.star-separator-secondary::after {
+    background: var(--secondary-color);
+}
+
+.star-separator-white {
+    color: white;
+}
+
+.star-separator-white::before,
+.star-separator-white::after {
+    background: white;
+}
+
+.portfolio-title {
+    color: #374151;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.portfolio-star-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.portfolio-line {
+    width: 80px;
+    height: 4px;
+    background: #374151;
+}
+
+.portfolio-star {
+    font-size: 2rem;
+    color: #374151;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    max-width: 400px;
+    width: 100%;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 188, 156, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 12px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-plus-icon {
+    color: white;
+    font-size: 4rem;
+    transform: scale(0.8);
+    transition: transform 0.4s ease-in-out;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-plus-icon {
+    transform: scale(1);
+}
+
+.contact-form-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #2c3e50 !important;
+    border-radius: 0 !important;
+    padding: 15px 0 !important;
+    font-size: 18px !important;
+    color: #2c3e50 !important;
+    transition: all 0.3s ease !important;
+}
+
+.contact-form-input:focus {
+    box-shadow: none !important;
+    border-bottom-color: #1abc9c !important;
+    background: transparent !important;
+}
+
+.contact-form-input::placeholder {
+    color: #7f8c8d !important;
+    opacity: 0.8 !important;
+}
+
+.contact-submit-btn {
+    background-color: #1abc9c !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    text-transform: none !important;
+}
+
+.contact-submit-btn:hover {
+    background-color: #16a085 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(26, 188, 156, 0.3) !important;
+}
+
+.social-icon {
+    min-width: 40px;
+    min-height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
