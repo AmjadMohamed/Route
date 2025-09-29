@@ -103,7 +103,7 @@ const Navbar = () => {
             <div className="hidden md:flex gap-4 items-center">
               <div className='relative'>
                 <Link href={"/wishlist"} className="relative p-2 rounded-md group flex items-center justify-center">
-                  <i className="fas fa-heart text-xl text-gray-700 group-hover:text-green-600 transition-colors duration-200"></i>
+                  <i className={`fas fa-heart text-xl transition-colors duration-200 ${isActive("/wishlist") ? "text-green-600" : "text-gray-700 group-hover:text-green-600"}`}></i>
                   {numOfWishlistItems > 0 ? (
                     <Badge className="w-1 h-4 text-[10px] absolute -top-1 -right-1 bg-green-500">
                       {numOfWishlistItems}
@@ -114,7 +114,7 @@ const Navbar = () => {
               
               <div className='relative'>
                 <Link href={"/cart"} className="relative p-2 rounded-md group flex items-center justify-center">
-                  <i className="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-green-600 transition-colors duration-200"></i>
+                  <i className={`fas fa-shopping-cart text-xl transition-colors duration-200 ${isActive("/cart") ? "text-green-600" : "text-gray-700 group-hover:text-green-600"}`}></i>
                   {numOfCartItems > 0 ? (
                     <Badge className="w-1 h-4 text-[10px] absolute -top-1 -right-1 bg-green-500">
                       {numOfCartItems}
@@ -159,7 +159,7 @@ const Navbar = () => {
                 <div className="flex justify-center gap-6 items-center pt-4 border-t border-gray-200">
                   <div className='relative'>
                     <Link href={"/wishlist"} className="relative p-2 rounded-md group flex items-center justify-center">
-                      <i className="fas fa-heart text-xl text-gray-700 group-hover:text-green-600 transition-colors duration-200"></i>
+                      <i className={`fas fa-heart text-xl transition-colors duration-200 ${isActive("/wishlist") ? "text-green-600" : "text-gray-700 group-hover:text-green-600"}`}></i>
                       {numOfWishlistItems > 0 ? (
                         <Badge className="w-1 h-4 text-[10px] absolute -top-1 -right-1 bg-green-500">
                           {numOfWishlistItems}
@@ -170,7 +170,7 @@ const Navbar = () => {
                   
                   <div className='relative'>
                     <Link href={"/cart"} className="relative p-2 rounded-md group flex items-center justify-center">
-                      <i className="fas fa-shopping-cart text-xl text-gray-700 group-hover:text-green-600 transition-colors duration-200"></i>
+                      <i className={`fas fa-shopping-cart text-xl transition-colors duration-200 ${isActive("/cart") ? "text-green-600" : "text-gray-700 group-hover:text-green-600"}`}></i>
                       {numOfCartItems > 0 ? (
                         <Badge className="w-1 h-4 text-[10px] absolute -top-1 -right-1 bg-green-500">
                           {numOfCartItems}
