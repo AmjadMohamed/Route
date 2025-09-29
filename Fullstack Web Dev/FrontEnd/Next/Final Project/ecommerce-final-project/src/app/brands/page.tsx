@@ -24,7 +24,7 @@ const Brands = async () => {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
           {data.map((brand: BrandsRoot, idx: number) => (
             <div key={idx} className='bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow'>
-              <div className='aspect-square mb-3 overflow-hidden rounded-lg bg-gray-50'>
+              <div className='aspect-square mb-3 overflow-hidden rounded-lg'>
                 <Image
                   alt={brand.name}
                   width={300}
