@@ -6,7 +6,7 @@ export async function middleware(request: NextRequest) {
 
     const { pathname } = request.nextUrl;
     const tkn = await getToken({ req: request })
-    const authPage = ["/signin", "signup"];
+    const authPage = ["/signin", "signup", "/resetPassword", "/verifyCode", "/forgetPassword"];
     const routes = ["/", "/subCategory", "/wishlist", "/allOrders", "/payment", "/brands", "/cart", "/categories", "/products", "/productDetails"];
 
     if (tkn && authPage.includes(pathname)) {
@@ -20,5 +20,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/", "/subCategory", "/wishlist", "/allOrders", "/payment", "/brands", "/cart", "/categories", "/products", "/productDetails", "/signin", "/signup"],
+    matcher: ["/", "/subCategory", "/wishlist", "/allOrders", "/payment", "/brands", "/cart", "/categories", "/products", "/productDetails", "/signin", "/signup", "/resetPassword", "/verifyCode", "/forgetPassword"],
 }

@@ -112,6 +112,14 @@ const SignIn = () => {
             )}
           />
           
+          <div className="text-right">
+            <Link 
+              href="/forgetPassword" 
+              className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200 text-sm"
+            >
+              Forget Password?
+            </Link>
+          </div>
 
           <Button className='w-full bg-green-500 hover:bg-green-600 cursor-pointer'>{isLoading ? <Loader2Icon className="animate-spin" /> : "Sign In"}</Button>
         </form>
