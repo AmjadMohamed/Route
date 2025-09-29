@@ -5,34 +5,43 @@ import { onlinePaymentAction } from '@/apis/PaymentActions/onlinePayment'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cartContext } from '@/context/CartContext'
+import { paymentSchema, PaymentSchemaType } from '@/schema/Payment.schema'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
-import React, { useContext, useRef } from 'react'
+import React, { useContext } from 'react'
+import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
 const Payment = () => {
 
-  const router = useRouter();
-  const { cartId, ResetDataAfterPayment } = useContext(cartContext);
 
+  const { cartId, ResetDataAfterPayment } = useContext(cartContext) as {
+    cartId: string;
+    ResetDataAfterPayment: () => void;
+  };
+  const router = useRouter()
+  const form = useForm<PaymentSchemaType>(
+    {
+      defaultValues: {
+        details: "",
+        phone: "",
+        city: ""
+      },
+      resolver: zodResolver(paymentSchema)
+    }
+  )
 
-
-  const details = useRef("");
-  const phone = useRef("");
-  const city = useRef("");
-
-  async function cashPayment() {
-
+  async function cashPayment(val: PaymentSchemaType) {
     const values = {
       shippingAddress: {
-        "details": details.current?.value,
-        "phone": phone.current?.value,
-        "city": city.current?.value
+        "details": val.details,
+        "phone": val.phone,
+        "city": val.city
       }
     }
 
     try {
       const data = await cashPaymentAction(cartId, values);
-
 
       toast.success(data.status, {
         position: "top-center",
@@ -46,7 +55,6 @@ const Payment = () => {
 
     }
     catch (error) {
-
       toast.error("Failed", {
         position: "top-center",
         duration: 3000,
@@ -57,13 +65,12 @@ const Payment = () => {
     }
   }
 
-  async function onlinePayment() {
-
+  async function onlinePayment(val: PaymentSchemaType) {
     const values = {
       shippingAddress: {
-        "details": details.current?.value,
-        "phone": phone.current?.value,
-        "city": city.current?.value
+        "details": val.details,
+        "phone": val.phone,
+        "city": val.city
       }
     }
 
@@ -85,7 +92,6 @@ const Payment = () => {
 
     }
     catch (error) {
-
       toast.error("Failed", {
         position: "top-center",
         duration: 3000,
@@ -99,19 +105,66 @@ const Payment = () => {
   return (
     <div className='md:w-1/2 w-full md:px-0 px-5 my-10 mx-auto'>
       <h1 className='mb-10 text-center text-3xl font-bold'>Payment</h1>
-      <div>
-        <label htmlFor='details'>Details</label>
-        <Input ref={details} type='text' id="details" className='mb-4' />
+      <form>
+        <div className='mb-4'>
+          <label htmlFor='details' className='block text-sm font-medium mb-2'>Address Details</label>
+          <Input
+            {...form.register('details')}
+            type='text'
+            id="details"
+            className='w-full'
+            placeholder='Enter your full address'
+          />
+          {form.formState.errors.details && (
+            <p className='text-red-500 text-sm mt-1'>{form.formState.errors.details.message}</p>
+          )}
+        </div>
 
-        <label htmlFor='phone'>Phone</label>
-        <Input ref={phone} type='tel' id="phone" className='mb-4' />
+        <div className='mb-4'>
+          <label htmlFor='phone' className='block text-sm font-medium mb-2'>Phone Number</label>
+          <Input
+            {...form.register('phone')}
+            type='tel'
+            id="phone"
+            className='w-full'
+            placeholder='01XXXXXXXXX'
+          />
+          {form.formState.errors.phone && (
+            <p className='text-red-500 text-sm mt-1'>{form.formState.errors.phone.message}</p>
+          )}
+        </div>
 
-        <label htmlFor='city'>City</label>
-        <Input ref={city} type='text' id="city" className='mb-5' />
+        <div className='mb-5'>
+          <label htmlFor='city' className='block text-sm font-medium mb-2'>City</label>
+          <Input
+            {...form.register('city')}
+            type='text'
+            id="city"
+            className='w-full'
+            placeholder='Enter your city'
+          />
+          {form.formState.errors.city && (
+            <p className='text-red-500 text-sm mt-1'>{form.formState.errors.city.message}</p>
+          )}
+        </div>
 
-        <Button className='bg-green-500 cursor-pointer' onClick={cashPayment}>Cash Payment</Button>
-        <Button className='ms-5 bg-green-500 cursor-pointer' onClick={onlinePayment}>Online Payment</Button>
-      </div>
+        <div className='flex gap-4'>
+          <Button
+            type='button'
+            className='bg-green-500 hover:bg-green-600 cursor-pointer'
+            onClick={form.handleSubmit(cashPayment)}
+          >
+            Cash Payment
+          </Button>
+          <Button
+            type='button'
+            className='bg-green-500 hover:bg-green-600  cursor-pointer'
+            onClick={form.handleSubmit(onlinePayment)}
+          >
+            Online Payment
+          </Button>
+        </div>
+      </form>
     </div>
   )
 }
