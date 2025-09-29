@@ -36,7 +36,7 @@ const WishList = () => {
                     <p className="text-gray-500 mb-6">Start adding items you love to your wishlist!</p>
                 </div>
             ) : (
-                <div className="flex flex-wrap">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                     {products?.map((product: ProductRoot, idx: number) => (
                         <HomeCard key={idx} product={product} />
                     ))}
@@ -46,4 +46,4 @@ const WishList = () => {
     )
 }
 
-export default WishList
+export default WishList;
