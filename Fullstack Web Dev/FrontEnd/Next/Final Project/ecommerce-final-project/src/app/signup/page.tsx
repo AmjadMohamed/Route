@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
+import Link from 'next/link'
 
 const SignUp = () => {
 
@@ -134,6 +135,18 @@ const SignUp = () => {
           <Button className='w-full bg-green-500 hover:bg-green-600 cursor-pointer'>{isLoading ? <Loader2Icon className="animate-spin" /> : "Sign Up"}</Button>
         </form>
       </Form>
+      
+      <div className="mt-6 text-center">
+        <p className="text-gray-600">
+          Already have an account?{' '}
+          <Link 
+            href="/signin" 
+            className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+          >
+            Sign in
+          </Link>
+        </p>
+      </div>
     </div>
   )
 }

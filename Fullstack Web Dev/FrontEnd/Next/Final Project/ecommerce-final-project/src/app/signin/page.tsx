@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { signIn } from "next-auth/react"
 import { Loader2Icon } from 'lucide-react'
+import Link from 'next/link'
 
 const SignIn = () => {
 
@@ -115,6 +116,18 @@ const SignIn = () => {
           <Button className='w-full bg-green-500 hover:bg-green-600 cursor-pointer'>{isLoading ? <Loader2Icon className="animate-spin" /> : "Sign In"}</Button>
         </form>
       </Form>
+      
+      <div className="mt-6 text-center">
+        <p className="text-gray-600">
+          Don't have an account?{' '}
+          <Link 
+            href="/signup" 
+            className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+          >
+            Sign up
+          </Link>
+        </p>
+      </div>
     </div>
   )
 }
