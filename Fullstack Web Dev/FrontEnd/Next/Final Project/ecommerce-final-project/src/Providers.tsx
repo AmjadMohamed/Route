@@ -4,6 +4,7 @@ import { SessionProvider } from 'next-auth/react'
 import React from 'react'
 import CartContextProvider from './context/CartContext'
 import WishlistContextProvider from './context/WishlistContext'
+import CategoryContextProvider from './context/CategoryContext'
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -11,7 +12,9 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
             <SessionProvider>
                 <CartContextProvider>
                     <WishlistContextProvider>
-                        {children}
+                        <CategoryContextProvider>
+                            {children}
+                        </CategoryContextProvider>
                     </WishlistContextProvider>
                 </CartContextProvider>
             </SessionProvider>

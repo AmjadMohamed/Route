@@ -23,7 +23,7 @@ const SignUp = () => {
         name: "",
         email: "",
         password: "",
-        rePassword: "F",
+        rePassword: "",
         phone: ""
       },
       resolver: zodResolver(signUpSchema)

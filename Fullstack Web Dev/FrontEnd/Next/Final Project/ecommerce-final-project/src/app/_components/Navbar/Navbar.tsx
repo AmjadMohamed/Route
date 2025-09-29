@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className='bg-slate-100 py-5'>
-      <div className='w-full md:w-[80%] mx-auto flex flex-col md:flex-row text-center justify-between items-center'>
+      <div className='w-full md:w-[80%] mx-auto flex flex-col gap-8 md:flex-row text-center justify-between items-center'>
         <ul className='flex flex-col md:flex-row text-center items-center gap-6'>
 
           {status === "authenticated" && <>
@@ -35,11 +35,11 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link href={"/categories"}>
                 Categories
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link href={"/brands"}>
@@ -112,7 +112,7 @@ const Navbar = () => {
           </>}
 
           {status === "unauthenticated" && <>
-            <div>
+            <div className='me-10'>
               <Link href="/signin">
                 SignIn
               </Link>

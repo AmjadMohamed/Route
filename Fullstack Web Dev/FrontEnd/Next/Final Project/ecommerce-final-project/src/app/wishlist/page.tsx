@@ -9,7 +9,7 @@ import { ProductRoot } from '@/types/product.type';
 import WishlistHeart from '../_components/WishlistHeart/WishlistHeart';
 import HomeCard from '../_components/HomeCard/HomeCard';
 
-const page = () => {
+const WishList = () => {
     const { products, isLoading } = useContext(wishlistContext);
 
     if (isLoading) {
@@ -46,4 +46,4 @@ const page = () => {
     )
 }
 
-export default page
+export default WishList
