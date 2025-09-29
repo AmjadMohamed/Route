@@ -17,8 +17,12 @@ const AllOrders = async () => {
 
     if (!data || data.length === 0) {
         return (
-            <div className='h-screen w-full flex justify-center items-center'>
-                <h1 className='text-green-600 font-bold text-3xl'>Oops, we could not find any orders to show</h1>
+            <div className="text-center h-screen flex flex-col justify-center items-center">
+                <div className="mb-4">
+                    <i className="fa-solid fa-receipt text-6xl text-gray-300"></i>
+                </div>
+                <h2 className="text-2xl font-semibold text-green-600 mb-2">No orders found</h2>
+                <p className="text-gray-500 mb-6">You haven't placed any orders yet!</p>
             </div>
         );
     }

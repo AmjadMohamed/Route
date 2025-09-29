@@ -11,7 +11,7 @@ export default async function Home() {
     <div className="min-h-screen bg-gray-50">
 
       {/* Main Content */}
-      <section className="px-4 md:px-0 py-12 w-full max-w-7xl mx-auto">
+      <section className="px-4 md:px-0 py-12 w-full md:w-[80%] mx-auto">
         <MainSlider />
 
         <div className="my-12">

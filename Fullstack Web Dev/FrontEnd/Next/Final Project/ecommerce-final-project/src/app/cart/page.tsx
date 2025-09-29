@@ -66,7 +66,7 @@ const Cart = () => {
         <div className="mb-6">
           <i className="fa-solid fa-shopping-cart text-6xl text-gray-300"></i>
         </div>
-        <h2 className="text-2xl font-semibold text-gray-700 mb-2">No Items Found</h2>
+        <h2 className="text-2xl font-semibold  text-green-600 mb-2">No Items Found</h2>
         <p className="text-gray-500">Your cart is empty. Start shopping to add items!</p>
       </div>
     </div>

@@ -19,16 +19,19 @@ const WishList = () => {
     }
 
     return (
-        <section className="px-5 md:px-0 my-10 w-full md:w-[80%] mx-auto">
-            <div className="mb-8">
-                <h1 className="text-2xl font-bold text-gray-800 mb-2">My Wishlist</h1>
-                <p className="text-gray-600">
-                    {products?.length > 0 ? `${products.length} item${products.length !== 1 ? 's' : ''} in your wishlist` : 'Your wishlist is empty'}
-                </p>
-            </div>
+
+        <div className="px-5 md:px-0 w-full md:w-[80%] mx-auto mt-10">
+            {products?.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-2xl font-bold text-gray-800 mb-2">My Wishlist</h1>
+                    <p className="text-gray-600">
+                        {products.length} item{products.length !== 1 ? 's' : ''} in your wishlist
+                    </p>
+                </div>
+            )}
 
             {products?.length === 0 ? (
-                <div className="text-center py-12">
+                <div className="text-center h-screen flex flex-col justify-center items-center">
                     <div className="mb-4">
                         <i className="fa-regular fa-heart text-6xl text-gray-300"></i>
                     </div>
@@ -36,13 +39,13 @@ const WishList = () => {
                     <p className="text-gray-500 mb-6">Start adding items you love to your wishlist!</p>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-10">
                     {products?.map((product: ProductRoot, idx: number) => (
                         <HomeCard key={idx} product={product} />
                     ))}
                 </div>
             )}
-        </section>
+        </div>
     )
 }
 
