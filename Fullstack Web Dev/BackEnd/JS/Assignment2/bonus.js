@@ -34,3 +34,5 @@ var findKthPositive = function(arr, k) {
 
 
 };
+
+// leetcode Solution: https://leetcode.com/problems/kth-missing-positive-number/submissions/2089288444/
