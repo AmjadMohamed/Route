@@ -313,3 +313,295 @@ const zlib = require('zlib');
 
     // compressFile("./data.txt", "./data.txt.gz");
 }
+
+//---------------------------------------------------------------------------PART 2---------------------------------------------------------------------------//
+
+// 1)Create an API that adds a new user to your users stored in a JSON file.
+const http = require("http");
+
+    const app = http.createServer(async (req, res) => {
+        const { method, url } = req;
+        if (method === "POST" && url === "/user") {
+            let userData = "";
+            req.on("data", (chunk) => {
+            userData += chunk;
+        });
+        req.on("end", async() => {
+            const readStream = await fs.createReadStream("./users.json");
+            let users = "";
+            readStream.on("data", (chunk) => {
+                users += chunk;
+            });
+            readStream.on("end",() => {
+                users = JSON.parse(users);
+                const userObj = JSON.parse(userData);
+                const userExist = users.find((user) => user.email == userObj.email);
+                if (userExist) {
+                    res.writeHead(409);
+                    return res.end("User already exists");
+                }
+
+                users.push(userObj);
+
+                // save users in json file
+                const writeStream = fs.createWriteStream("./users.json");
+                writeStream.write(JSON.stringify(users), (error) => {
+                if (!error) {
+                    res.writeHead(201);
+                    return res.end("User Created successfully");
+                }
+                res.writeHead(500);
+                    return res.end("Something went wrong");
+                });
+            });
+        });
+    } 
+
+// 2) Create an API that updates an existing user's name, age, or email by their ID.
+    else if(url.startsWith('/user') && method === "PATCH"){
+        let body = "";
+
+        req.on("data", (chunk) => {
+            body += chunk;
+        });
+
+        req.on("end", () => {
+            body = JSON.parse(body);
+
+            let id = Number(url.split('/')[2]);
+
+            fs.readFile('./users.json', {
+                encoding: "utf-8"
+            }, (err, data) => {
+
+                if (err) {
+                    res.writeHead(500, {
+                        'content-type': 'application/json'
+                    });
+
+                    return res.end(JSON.stringify({
+                        message: "Something went wrong",
+                        success: false
+                    }));
+                }
+
+                let users = JSON.parse(data);
+
+                const userExist = users[id - 1];
+
+                if(!userExist){
+                    res.writeHead(404, {
+                        'content-type': 'application/json'
+                    });
+
+                    res.write(JSON.stringify({
+                        message: "user ID not found",
+                        success: false
+                    }));
+
+                    res.end();
+                    return;
+                }
+
+                if (body.name) {
+                    userExist.name = body.name;
+                }   
+
+                if (body.age) {
+                    userExist.age = body.age;
+                }
+
+                if (body.email) {
+                    userExist.email = body.email;
+                }
+
+                fs.writeFile(
+                    './users.json',
+                    JSON.stringify(users, null, 2),
+                    (err) => {
+
+                        if (err) {
+                            res.writeHead(500, {
+                                'content-type': 'application/json'
+                            });
+
+                            return res.end(JSON.stringify({
+                                message: "Something went wrong",
+                                success: false
+                            }));
+                        }
+
+                        res.writeHead(200, {
+                            'content-type': 'application/json'
+                        });
+
+                        res.write(JSON.stringify({
+                            message: "User updated successfully.",
+                            success: true
+                        }));
+
+                        res.end();
+                    });
+                });
+            });
+        }
+
+//3) Create an API that deletes a User by ID. 
+    else if(url.startsWith('/user') && method === "DELETE"){
+
+        let id = Number(url.split('/')[2]);
+
+        fs.readFile('./users.json', {
+            encoding: "utf-8"
+        }, (err, data) => {
+
+        if(err){
+                res.writeHead(500, {
+                    'content-type': 'application/json'
+                });
+
+                return res.end(JSON.stringify({
+                    message: "Something went wrong",
+                    success: false
+                }));
+        }
+
+        let users = JSON.parse(data);
+
+        const userExist = users[id - 1];
+
+        if(!userExist){
+            res.writeHead(404, {
+                'content-type': 'application/json'
+            });
+
+            res.write(JSON.stringify({
+                message: "user ID not found",
+                success: false
+            }));
+
+            res.end();
+            return;
+        }
+        users.splice(id - 1, 1);
+        fs.writeFile(
+            './users.json',
+            JSON.stringify(users, null, 2),
+            (err) => {
+
+                if(err){
+                    res.writeHead(500, {
+                        'content-type': 'application/json'
+                    });
+
+                    return res.end(JSON.stringify({
+                        message: "Something went wrong",
+                        success: false
+                    }));
+                }
+
+                res.writeHead(200, {
+                    'content-type': 'application/json'
+                });
+
+                res.write(JSON.stringify({
+                    message: "User deleted successfully.",
+                    success: true
+                }));
+
+                res.end();
+            });
+        });
+    }
+
+//4) Create an API that gets all users from the JSON file. 
+    else if (url === '/user' && method === "GET") {
+
+        fs.readFile('./users.json', {
+            encoding: "utf-8"
+        }, (err, data) => {
+
+            if (err) {
+                res.writeHead(500, {
+                    'content-type': 'application/json'
+                });
+
+                return res.end(JSON.stringify({
+                    message: "Something went wrong",
+                    success: false
+                }));
+            }
+
+            const users = JSON.parse(data);
+
+            res.writeHead(200, {
+                'content-type': 'application/json'
+            });
+
+            res.write(JSON.stringify({
+                message: "Users fetched successfully",
+                success: true,
+                users: users
+            }));
+
+            res.end();
+        });
+    }
+
+//5) Create an API that gets User by ID.
+    else if (url.startsWith('/user/') && method === "GET") {
+
+        let id = Number(url.split('/')[2]);
+
+        fs.readFile('./users.json', {
+            encoding: "utf-8"
+        }, (err, data) => {
+
+            if (err) {
+                res.writeHead(500, {
+                    'content-type': 'application/json'
+                });
+
+                return res.end(JSON.stringify({
+                    message: "Something went wrong",
+                    success: false
+                }));
+            }
+
+            const users = JSON.parse(data);
+
+            const userExist = users[id - 1];
+
+            if (!userExist) {
+                res.writeHead(404, {
+                    'content-type': 'application/json'
+                });
+
+                return res.end(JSON.stringify({
+                    message: "user ID not found",
+                    success: false
+                }));
+            }
+
+            res.writeHead(200, {
+                'content-type': 'application/json'
+            });
+
+            res.write(JSON.stringify({
+                user: userExist
+            }));
+
+            res.end();
+        });
+    }
+});
+
+
+const port = 3000;
+
+app.listen(port, () => {
+
+    console.log(`Server is running on port ${port}`);
+});
+
+// Postman Collection Link: https://documenter.getpostman.com/view/38377101/2sBY4VLdDL#142b0527-50d0-431a-b723-e6b267a4fc3f
